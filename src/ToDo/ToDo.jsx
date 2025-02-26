@@ -18,7 +18,10 @@ export default function ToDo(){
         console.log(toDo.id)
     }
 
-   
+    function deleteToDo(toDoId){
+        setToDoList(toDoList.filter((toDo)=> toDoId !== toDo.id))
+    }
+
  
 
     return(

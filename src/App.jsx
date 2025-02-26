@@ -1,11 +1,11 @@
-import ToDo from './ToDo/ToDo.jsx'
+import ToDoApp from './ToDo/ToDoApp.jsx'
 
 
 function App() {
  
   return (
     <>
-      <ToDo/>
+      <ToDoApp/>
     </>
   )
 }

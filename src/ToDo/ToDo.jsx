@@ -23,6 +23,9 @@ export default function ToDo(){
                 <input onChange={inputValueHandler} className="rounded-lg border border-zinc-950 py-1.5 px-2" type="text" />
                 <button onClick={addToDo} className="rounded-lg border border-zinc-950 p-1.5 cursor-pointer">Add</button>
               </div>
+                {toDoList.map((toDo)=>{
+                    return <h1 className="font-semibold text-lg border-b border-zinc-950 mb-3">{toDo}</h1>
+                })}
               <div>
                   
               </div>

@@ -8,6 +8,12 @@ export default function ToDo(){
     function inputValueHandler(event){
         setNewToDo(event.target.value)
     }
+
+    function addToDo(){
+        setToDoList([...toDoList , newToDo])
+
+        console.log(toDoList)
+    }
  
 
     return(

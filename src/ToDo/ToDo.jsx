@@ -10,10 +10,15 @@ export default function ToDo(){
     }
 
     function addToDo(){
-        setToDoList([...toDoList , newToDo])
-
-        console.log(toDoList)
+        const toDo = {
+            id: toDoList.length === 0 ? 1 : toDoList[toDoList.length - 1].id + 1,
+            toDoName: newToDo
+        }
+        setToDoList([...toDoList , toDo])
+        console.log(toDo.id)
     }
+
+   
  
 
     return(
@@ -24,7 +29,10 @@ export default function ToDo(){
                 <button onClick={addToDo} className="rounded-lg border border-zinc-950 p-1.5 cursor-pointer">Add</button>
               </div>
                 {toDoList.map((toDo)=>{
-                    return <h1 className="font-semibold text-lg border-b border-zinc-950 mb-3">{toDo}</h1>
+                    return <div key={`div_${toDo.id}`} className="flex items-center gap-x-2">
+                        <h1 key={`h1_${toDo.id}`} className="font-semibold text-lg border-b border-zinc-950 mb-3">{toDo.toDoName}</h1>
+                        <button key={`btn_${toDo.id}`} onClick={() => deleteToDo(toDo.id)} className="font-semibold text-lg rounded-lg border border-zinc-950 px-3 py-0.5 cursor-pointer">x</button>
+                    </div>
                 })}
               <div>
                   

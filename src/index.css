@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+    --color-blue-60: oklch(40.01% 0.0717 221.45);
+    --color-blue-70: oklch(73.94% 0.0314 304.97);
+    --color-blue-20: oklch(86.81% 0.0234 252.19);
+    --color-pink-60: oklch(83.73% 0.0697 27.44);
+    --color-green-60: oklch(48.48% 0.0549 164.7);
+    --color-pink-70: oklch(70.66% 0.0646 359.55);
+    --color-pink-80: oklch(51.58% 0.1981 13.88);
+    --color-orange-60: oklch(75.83% 0.0767 46.84);
+    --color-pink-90: oklch(61.1% 0.1199 24.39);
+    --color-pink-40: oklch(82.64% 0.0521 13.77);
+    --color-purple-40: oklch(70.31% 0.0608 359.57);
+    --color-alpha-50: oklch(86.4% 0.0234 252.19 / 10%);
+}

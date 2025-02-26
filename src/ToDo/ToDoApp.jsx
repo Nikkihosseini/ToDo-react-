@@ -37,7 +37,10 @@ export default function ToDoApp(){
 
     return(
         <>
-           <div className="flex flex-col items-center justify-center mt-10 gap-y-2">
+           <div className="relative bg-alpha-50 border border-blue-20 backdrop-blur-md h-[70vh] w-[22vw] rounded-2xl z-40">
+            <span className="absolute top-[-60px] left-[-60px] block rounded-full size-40 bg-linear-45 from-pink-80 to-orange-60 z-0"></span>
+            <span className="absolute block rounded-full size-50 bg-linear-45 from-green-60 to-purple-40 z-0"></span>
+            <span className="absolute block rounded-full size-30 bg-linear-45 from-pink-90 to-pink-40 z-0"></span>
               <div className="flex items-center gap-x-2">
                 <input onChange={inputValueHandler} className="rounded-lg border border-zinc-950 py-1.5 px-2" type="text" />
                 <button onClick={addToDo} className="rounded-lg border border-zinc-950 p-1.5 cursor-pointer">Add</button>

@@ -13,7 +13,8 @@ export default function ToDoApp(){
     function addToDo(){
         const toDo = {
             id: toDoList.length === 0 ? 1 : toDoList[toDoList.length - 1].id + 1,
-            toDoName: newToDo
+            toDoName: newToDo,
+            isCompleted: false
         }
         setToDoList([...toDoList , toDo])
         console.log(toDo.id)
@@ -21,6 +22,15 @@ export default function ToDoApp(){
 
     function deleteToDo(toDoId){
         setToDoList(toDoList.filter((toDo)=> toDoId !== toDo.id))
+    }
+
+    function completedToDo(toDoId){
+        setToDoList(toDoList.map((toDo)=>{
+            if(toDo.id === toDoId){
+                return {...toDo ,  isCompleted: !toDo.isCompleted}
+            } else
+                return toDo
+        }))
     }
 
  
@@ -35,7 +45,9 @@ export default function ToDoApp(){
                 {toDoList.map((toDo)=>{
                     return (
                         <ToDo key={toDo.id} toDo={toDo
-                        } deleteToDo={deleteToDo}/>
+                        } 
+                        completedToDo={completedToDo}
+                        deleteToDo={deleteToDo}/>
                     )
                 })}
               <div>

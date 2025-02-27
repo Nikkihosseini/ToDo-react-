@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Archivo-bold';
+    src: url(../public/font/Archivo/Archivo-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Archivo-semiBold';
+    src: url(../public/font/Archivo/Archivo-SemiBold.ttf) format("truetype");
+}
+
 @theme {
     --color-blue-60: oklch(40.01% 0.0717 221.45);
     --color-blue-70: oklch(73.94% 0.0314 304.97);
-    --color-blue-20: oklch(86.81% 0.0234 252.19);
+    --color-blue-20: oklch(83.08% 0.0234 252.19);
     --color-pink-60: oklch(83.73% 0.0697 27.44);
     --color-green-60: oklch(48.48% 0.0549 164.7);
     --color-pink-70: oklch(70.66% 0.0646 359.55);
@@ -12,13 +21,23 @@
     --color-pink-90: oklch(66.97% 0.1491 26.73);
     --color-pink-40: oklch(82.64% 0.0521 13.77);
     --color-purple-40: oklch(83.36% 0.0568 12.87);
-    --color-alpha-50: oklch(86.4% 0.0234 252.19 / 10%);
+    --color-alpha-50: oklch(83.08% 0.0234 252.19 / 23.22%);
+
+    --font-Archivo-bold: 'Archivo-bold';
+    --font-Archivo-semiBold: 'Archivo-semiBold';
 }
 
 @layer base{
     body{
-        @apply flex flex-col items-center justify-center h-screen bg-linear-45 from-blue-60 via-blue-70 to-pink-60 bg-no-repeat bg-center bg-contain;
-        background-image: linear-gradient() url('../public/svg/noise.svg');
+        @apply font-Archivo-semiBold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(45deg, #055063 , #afa6bb , #f4b9b1);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
-

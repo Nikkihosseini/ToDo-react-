@@ -9,8 +9,16 @@
     --color-pink-70: oklch(70.66% 0.0646 359.55);
     --color-pink-80: oklch(51.58% 0.1981 13.88);
     --color-orange-60: oklch(75.83% 0.0767 46.84);
-    --color-pink-90: oklch(61.1% 0.1199 24.39);
+    --color-pink-90: oklch(66.97% 0.1491 26.73);
     --color-pink-40: oklch(82.64% 0.0521 13.77);
-    --color-purple-40: oklch(70.31% 0.0608 359.57);
+    --color-purple-40: oklch(83.36% 0.0568 12.87);
     --color-alpha-50: oklch(86.4% 0.0234 252.19 / 10%);
 }
+
+@layer base{
+    body{
+        @apply flex flex-col items-center justify-center h-screen bg-linear-45 from-blue-60 via-blue-70 to-pink-60 bg-no-repeat bg-center bg-contain;
+        background-image: linear-gradient() url('../public/svg/noise.svg');
+    }
+}
+

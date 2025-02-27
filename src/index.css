@@ -22,6 +22,7 @@
     --color-pink-40: oklch(82.64% 0.0521 13.77);
     --color-purple-40: oklch(83.36% 0.0568 12.87);
     --color-alpha-50: oklch(83.08% 0.0234 252.19 / 23.22%);
+    --color-alpha-60: oklch(98.49% 0.0234 252.19 / 34.78%);
 
     --font-Archivo-bold: 'Archivo-bold';
     --font-Archivo-semiBold: 'Archivo-semiBold';
@@ -40,4 +41,11 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+}
+
+@layer utilities {
+    textarea{
+        scrollbar-width: none;
+    }
+   
 }

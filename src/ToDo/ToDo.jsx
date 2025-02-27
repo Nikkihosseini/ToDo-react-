@@ -1,11 +1,13 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faSquareCheck } from '@fortawesome/free-regular-svg-icons'
 
 export default function ToDo(props){
     return(
-        <div className="flex items-center gap-x-2">
-            <h2 className="font-Archivo-semiBold text-lg border-b border-zinc-950 mb-3">{props.toDo.toDoName}</h2>
-            <button onClick={() => props.deleteToDo(props.toDo.id)} className="font-semibold text-lg rounded-lg border border-zinc-950 px-3 py-0.5 cursor-pointer">x</button>
-            <button style={{backgroundColor : props.toDo.isCompleted ? 'limegreen' : 'pink'}} onClick={() => props.completedToDo(props.toDo.id)} className="font-semibold text-lg rounded-lg border border-zinc-950 px-3 py-0.5 cursor-pointer">Completed</button>
-        </div>
+        <li style={{backgroundColor : props.toDo.isCompleted ? 'limegreen' : '#effcff59'}} className="flex items-start justify-between rounded-xl overflow-x-hidden px-4 py-1.5 w-full mt-3">
+            <FontAwesomeIcon className='cursor-pointer fa-xl mr-2' onClick={() => props.completedToDo(props.toDo.id)} icon={faSquareCheck} />
+            <h2 className="font-Archivo-semiBold text-sky-50 w-53 overflow-hidden break-all">{props.toDo.toDoName}</h2>
+            <FontAwesomeIcon className='cursor-pointer fa-xl' onClick={() => props.deleteToDo(props.toDo.id)} icon={faXmark} />
+        </li>
     )
 }

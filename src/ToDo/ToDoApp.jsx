@@ -35,16 +35,15 @@ export default function ToDoApp(){
 
     return(
         <>
-           <div className="relative">
-
-            <div className="relative h-[70vh] w-[22vw] rounded-2xl z-40">
+            <div className="flex items-center justify-center relative h-[70vh] w-[22vw] rounded-2xl z-40">
                 <span className="absolute top-[-60px] left-[-60px] block rounded-full size-50 bg-linear-45 from-pink-80 to-orange-60 -z-10"></span>
                 <span className="absolute bottom-[149px] right-[-104px] block rounded-full size-70 bg-linear-45 from-green-60 to-purple-40 -z-10"></span>
                 <span className="absolute bottom-[-13px] left-[-13px] block rounded-full size-40 bg-linear-45 from-pink-90 to-pink-40 -z-10"></span>
-                <div className=" bg-alpha-50 border border-blue-20 backdrop-blur-md h-[70vh] w-[22vw] rounded-2xl overflow-hidden">
-                        <div className="flex items-center gap-x-2">
-                            <input onChange={inputValueHandler} className="rounded-lg border border-zinc-950 py-1.5 px-2" type="text" />
-                            <button onClick={addToDo} className="rounded-lg border border-zinc-950 p-1.5 cursor-pointer">Add</button>
+                <div className=" bg-alpha-50 border border-blue-20 backdrop-blur-[20px] h-[70vh] w-[22vw] rounded-2xl overflow-hidden p-6">
+                        <div className="relarive flex flex-col text-left gap-x-2 h-[7rem] w-full">
+                            <h1 className="font-Archivo-bold text-xl text-sky-950">Create task:</h1>
+                            <input onChange={inputValueHandler} className="py-1.5 px-2" type="text" placeholder="New task..."/>
+                            <button onClick={addToDo} className="absolute rounded-lg border border-zinc-950 p-1.5 cursor-pointer bottom-0 right-0">Add</button>
                         </div>
                         <div>
                             {toDoList.map((toDo)=>{
@@ -58,7 +57,6 @@ export default function ToDoApp(){
                         </div>
                 </div>
             </div>
-           </div>
         </>
     )
 }

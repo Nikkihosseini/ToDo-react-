@@ -1,8 +1,8 @@
-# React + Vite
+# To Do List App (reactjs)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description:
+A responsive To Do List App with react js & tailwind css.
 
-Currently, two official plugins are available:
+### snapshot:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a href="https://ibb.co/R40zJHMd"><img src="https://i.ibb.co/wrWM26bj/Screenshot-26-1.png" alt="Screenshot-26-1" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a>
